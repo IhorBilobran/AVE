@@ -17,11 +17,11 @@ li, ul, a, p, span {
   padding: 0;
   text-decoration: none; }
 
-.main-header-nav .basket div:nth-child(1) {
+.main-header-nav .basket div:nth-child(1), .items-wrapper .item .img, .items-wrapper .item .small .small-img-1, .items-wrapper .item .small .small-img-2 {
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: contain;
-          background-size: contain; }
+  -webkit-background-size: cover;
+          background-size: cover; }
 
 .flex {
   display: -webkit-box;
@@ -49,11 +49,14 @@ li, ul, a, p, span {
 .grid {
   display: grid; }
 
-.content-size {
+.content-size, .main, .items {
+  overflow: hidden;
   width: 100%;
   max-width: 2000px;
-  padding: 0 440px;
   margin: 0 auto; }
+
+.content-size {
+  padding: 0 440px; }
 
 .main-header {
   background-color: #333333; }
@@ -100,13 +103,10 @@ li, ul, a, p, span {
                   background-size: contain; }
 
 .main {
-  overflow: hidden;
-  width: 100%;
-  max-width: 2000px;
   background-color: #f8f8f8;
   height: 920px;
-  margin: 0 auto;
-  position: relative; }
+  position: relative;
+  margin-bottom: 60px; }
 
 .slider {
   height: 100%;
@@ -207,6 +207,135 @@ li, ul, a, p, span {
       background-repeat: no-repeat;
       background-background-position: center;
       background-background-size: cover; }
+
+.items {
+  padding: 0 135px; }
+  .items-menu {
+    padding: 58px 0;
+    border-top: 1px solid #eeeeee; }
+    .items-menu a {
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-right: 55px;
+      color: #575153; }
+      .items-menu a:first-child {
+        color: #00c8c8; }
+  .items-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-row: repeat(2, fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(200px, 500px);
+    padding-bottom: 60px;
+    border-bottom: 1px solid #eeeeee; }
+    .items-wrapper .item {
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      height: 100%; }
+      .items-wrapper .item:nth-child(3) {
+        grid-column: 3/ 5; }
+      .items-wrapper .item:nth-child(4) {
+        grid-column: 1/ 3; }
+      .items-wrapper .item .img {
+        width: 100%;
+        height: 100%; }
+      .items-wrapper .item:hover {
+        -webkit-box-shadow: 0px 27px 64px 3px rgba(148, 148, 148, 0.84);
+                box-shadow: 0px 27px 64px 3px rgba(148, 148, 148, 0.84); }
+      .items-wrapper .item:hover .active-menu {
+        -webkit-box-shadow: 0px 27px 64px 3px rgba(148, 148, 148, 0.84);
+                box-shadow: 0px 27px 64px 3px rgba(148, 148, 148, 0.84);
+        display: block; }
+      .items-wrapper .item:hover .small {
+        display: block; }
+      .items-wrapper .item .price {
+        font-size: 17px;
+        position: absolute;
+        padding: 15px;
+        top: 0;
+        left: 0;
+        background-color: #f8f8f8; }
+      .items-wrapper .item .small {
+        position: absolute;
+        padding: 15px;
+        top: 15px;
+        right: 15px;
+        width: 112px;
+        display: none; }
+        .items-wrapper .item .small div, .items-wrapper .item .small img {
+          width: 100%;
+          height: auto;
+          height: 100px;
+          border: 1px solid #fff; }
+          .items-wrapper .item .small div:hover, .items-wrapper .item .small img:hover {
+            border: 1px solid #00c8c8; }
+        .items-wrapper .item .small .small-img-1 {
+          margin-bottom: 15px;
+          background-image: url(../img/item-1.png); }
+        .items-wrapper .item .small .small-img-2 {
+          background-image: url(../img/item-1.png); }
+      .items-wrapper .item .active-menu {
+        position: absolute;
+        z-index: 10;
+        width: inherit;
+        height: 170px;
+        background-color: #fff;
+        bottom: -168px;
+        padding: 20px 50px;
+        border-top: 1px solid #eeeeee;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        text-align: center;
+        display: none;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease; }
+        .items-wrapper .item .active-menu .main-desc {
+          text-transform: uppercase;
+          font-weight: 600;
+          margin-bottom: 6px; }
+        .items-wrapper .item .active-menu .icons {
+          margin-top: 5px; }
+          .items-wrapper .item .active-menu .icons div {
+            cursor: pointer;
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            -webkit-border-radius: 100%;
+                    border-radius: 100%;
+            background-color: #727272;
+            margin-right: 8px; }
+            .items-wrapper .item .active-menu .icons div:hover {
+              background-color: #00c8c8; }
+      .items-wrapper .item:nth-child(1) .img {
+        background-image: url(../img/item-1.png); }
+      .items-wrapper .item:nth-child(2) .img {
+        background-image: url(../img/item-2.png); }
+      .items-wrapper .item:nth-child(3) .img {
+        background-image: url(../img/item-3.png);
+        background-position: top; }
+      .items-wrapper .item:nth-child(4) .img {
+        background-image: url(../img/item-4.png);
+        background-position: top; }
+      .items-wrapper .item:nth-child(5) .img {
+        background-image: url(../img/item-5.png); }
+      .items-wrapper .item:nth-child(6) .img {
+        background-image: url(../img/item-6.png); }
 
 .mens-tab, .womens-tab {
   -webkit-box-orient: vertical;

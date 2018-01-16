@@ -1,0 +1,43 @@
+.mens-tab, .womens-tab
+	flex-direction: column;
+	position: relative
+	cursor: pointer
+	&:hover .arrow
+		background-image: url(../img/arrow-hover.png)
+	.arrow
+		margin-top: 7px
+		width: 10px
+		height: 7px
+		background-image: url(../img/arrow.png)
+		background:
+			repeat: no-repeat
+			background-position: center
+			background-size: cover
+	.tab-content 
+		position: absolute
+		width: 470px
+		height: 520px
+		padding: 30px
+		top: 35px
+		grid-template-rows: 1fr 1fr
+		grid-row-gap: 20px
+		background-color: #f8f8f8
+		box-shadow: 1px 28px 63px -4px rgba(0,0,0,0.62)
+		display: none
+
+		.content 
+			grid-template-columns: 1fr 1fr
+			.casual, .formal
+				color: $header-text
+				font-weight: bold
+				a 
+					font-weight: 500
+					text-transform: capitalize
+					margin-bottom: 15px
+					color: $main-text
+					&:hover 
+						color: $main-hover
+					&:first-child
+						margin-top: 30px
+	.add 
+		background-image: url(../img/add.png)

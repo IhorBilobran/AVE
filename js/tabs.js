@@ -4,5 +4,9 @@ $(document).ready(function(){
 			tabContent = $('.tab-content');
 		
 		$(this).find('div[data-tab='+DataTab+']').slideToggle();
+		// тут чотенько
+		$(this).find('div[data-tab='+DataTab+']').mouseleave(function(){
+			$(this).slideUp();
+		});
 	});
 });

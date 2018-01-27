@@ -1,0 +1,93 @@
+@keyframes bounceInRight 
+	from 
+		opacity: 0
+		transform: translate3d(3000px, 0, 0) 
+	60% 
+		opacity: 1
+		transform: translate3d(-25px, 0, 0) 
+	75% 
+		transform: translate3d(10px, 0, 0) 
+	90% 
+		transform: translate3d(-5px, 0, 0) 
+	to 
+		transform: none
+		opacity: 1 
+
+@keyframes bounceOutLeft 
+	from 
+		opacity: 1
+		transform: translate3d(20px, 0, 0)					 
+	to 
+		opacity: 0
+		transform: translate3d(-2000px, 0, 0)
+		opacity: 0  
+
+
+.slider 
+	height: 100%
+	width: 100%
+	position: absolute
+	z-index: 1 
+	overflow: hidden
+	
+	.slider-img-men 
+		margin-left: 370px
+		height: 100%
+		width: 600px
+		background-image: url(../img/slider-male.png)
+		background-repeat: no-repeat
+		background-size: cover
+		padding-bottom: 120px
+		opacity: 0
+	
+	.slider-img-woman 
+		margin-left: 280px
+		height: 100%
+		width: 800px
+		background-image: url(../img/slider-female.png)
+		background-repeat: no-repeat
+		background-size: cover
+		padding-bottom: 120px
+		opacity: 0
+	
+	.ave, .nue
+		position: absolute
+		text-transform: uppercase
+		font-weight: 800
+		font-size: 450px
+		color: #575153
+		letter-spacing: 300px
+		line-height: 450px
+		top: 215px
+		left: 250px
+		opacity: 0
+		
+	
+	.nue 
+		left: 180px
+	
+
+.slideIn
+	animation: bounceInRight 1.3s ease-in
+	animation-fill-mode: forwards
+
+.slideInSlow 
+	animation: bounceInRight 1.3s ease-in
+	animation-delay: .3s
+	animation-fill-mode: forwards
+
+
+.slideOut 
+	animation: bounceOutLeft 1.3s ease-in
+	animation-fill-mode: forwards
+
+.slideOutSlow 
+	animation: bounceOutLeft 1.3s ease-in
+	animation-delay: .3s
+	animation-fill-mode: forwards
+
+.opacity 
+	opacity: 1
+
+.hide 
+	display: none

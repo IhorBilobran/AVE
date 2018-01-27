@@ -105,6 +105,10 @@
     left: 250px;
     opacity: 0;
     }
+  
+  .nue {
+    left: 180px;
+  }
 
 .slideIn {
     -webkit-animation: bounceInRight 1.3s ease-in;

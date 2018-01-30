@@ -4,7 +4,7 @@
 // }, 2000);
 
 $(document).ready(function(){
-
+	
 	var imgMan = $('#slider .slider-img-men'),
 	    imgWoman = $('#slider .slider-img-woman'),
 	    ave = $('#slider .ave'),	

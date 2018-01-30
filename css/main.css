@@ -234,7 +234,8 @@ li, ul, a, p, span {
       height: 28px;
       background: inherit;
       border: 1px solid #e7e7e7;
-      outline: none; }
+      outline: none; 
+      padding-left: 10px;}
     .main-nav .search .search-icon {
       cursor: pointer;
       position: relative;
@@ -747,7 +748,7 @@ li, ul, a, p, span {
   .slider .slider-img-men, .slider .slider-img-woman {
     width: 490px; }
   .slider .ave, .slider .nue {
-    left: 50px;
+    left: 100px;
     font-size: 190px;
     top: 10%; }
   .slider .button {
@@ -758,7 +759,7 @@ li, ul, a, p, span {
       line-height: 18px;
       margin-bottom: 15px; } }
 
-@media only screen and (max-width: 1080px) {
+/* @media only screen and (max-width: 1080px) {
   .slider .slider-img-men, .slider .slider-img-woman {
     height: 100%;
     width: 490px; }
@@ -781,3 +782,4 @@ li, ul, a, p, span {
 @media only screen and (max-width: 420px) {
   .slider .slider-img-men, .slider .slider-img-woman {
     height: 100%; } }
+ */

@@ -2,7 +2,7 @@
 .main-nav .search input {
 	  padding-left: 15px;}
 
-.mobie-nav {
+.mobile-nav {
 	display: none;
 }
 @media only screen and (max-width: 1380px) {
@@ -69,6 +69,11 @@
 	padding: 15px 80px;
 }
 @media only screen and (max-width: 800px) {
+	.main-header-nav .basket {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.content-size {
 		padding: 0px 20px;
 	}
@@ -151,6 +156,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+	.main {
+		margin-bottom: 40px;
+	}
+	.items-menu {
+		padding: 40px 0;
+	}
 	.slider .ave, .slider .nue {
 		left: 0px;
 		font-size: 110px;
@@ -174,29 +185,97 @@
 	.items-wrapper .item .active-menu {
 		padding: 10px 0px;
 	}
+	.lookbook {
+		padding: 0;
+	}
+	.lookbook-item .look-desc {
+		padding-right: 13px;
+	}
 	.lookbook-item .look-desc .title {
 		font-size: 19px; }
 	.footer-container {
 		padding: 27px 10px;
 	}
 	.footer-container .links {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
+		grid-gap: 5px;
 	}
 	.main-footer {
 		padding: 15px 10px;
-		flex-wrap: wrap;
+	}
+	.main-footer div:nth-child(2) {
+		display: flex;
 	}
 }
 
 @media only screen and (max-width: 420px) {
+
+	.main-header-nav a{
+		font-size: 13px;
+	}
+	.main-header-nav a span{
+		font-size: 11px;
+	}
 	.main-nav .search  {
 		display: none;
 	}
 	.main-nav .logo  {
 		font-size: 13px;
 	}
+	.slider .slider-img-men { 
+		width: 330px;
+		left: 0px;
+	}
+	.slider .slider-img-woman {
+		width: 365px;
+		left: 0px;
+	}
+	.slider .ave, .slider .nue {
+		font-size: 110px;
+		top: 10%;
+		left: 3%;
+		letter-spacing: 0.2em;
+	}
+	.slider .button {
+		font-size: 10px;
+	}
 	.content-size {
 		padding: 0px 0px;
 	}
+	.items-wrapper {
+		grid-template-columns: 1fr;
+		padding-bottom: 40px;
+	}
+	.items {
+		padding: 0px 65px;
+	}
+	.items-wrapper .item:nth-child(3) {
+		grid-column: 1 / 2; }
+	.items-wrapper .item:nth-child(2) {
+		grid-row: 1; }
+	.items-wrapper .item:nth-child(4) {
+		grid-column: 1 / 2; }
+	.items-wrapper .item .info-icon {
+		right: 39%;
+	}
+	.lookbook {
+		grid-template-rows: repeat(3,270px);
+		grid-gap: 15px;
+	}
+	.lookbook-item {
+		grid-template-columns: 130px 1fr; }
+	.lookbook .look-desc .desc {
+		font-size: 12px;
+		line-height: 12px;
+		margin-bottom: 15px;
+		width: 100%; }
+	.lookbook-item .look-desc .button {
+		padding: 5px 10px;
+		font-size: 12px;
+		}
+	.links .info {
+		text-align: center;
+	}
+
 
 }

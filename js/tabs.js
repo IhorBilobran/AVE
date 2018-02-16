@@ -5,8 +5,8 @@ $(document).ready(function(){
 		
 		$(this).find('div[data-tab='+DataTab+']').slideToggle();
 		// тут чотенько
-		$(this).find('div[data-tab='+DataTab+']').mouseleave(function(){
-			$(this).slideUp();
-		});
+		// $(this).find('div[data-tab='+DataTab+']').mouseleave(function(){
+		// 	$(this).slideUp();
+		// });
 	});
 });

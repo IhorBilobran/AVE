@@ -80,6 +80,11 @@ li, ul, a, p, span
 
 .mobile-nav
 	display: none
+	cursor: pointer
+	font-size: 16px
+	padding-right: 10px
+	&:hover
+		color: $main-hover
 
 // ------------header
 
@@ -519,6 +524,7 @@ li, ul, a, p, span
 	span:nth-child(2)
 		margin-left: 30px
 
-@import 'tabs'
 @import 'slider'
 @import 'media'
+@import 'tabs'
+@import 'mobile-menu'
